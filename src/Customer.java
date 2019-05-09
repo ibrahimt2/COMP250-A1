@@ -48,7 +48,9 @@ public class Customer {
 		
 		else {
 			balance -= Basket.getTotalCost();
-			return Basket.toString();
+			String reciept = Basket.toString();
+			Basket.clear();
+			return reciept;
 		}
 	}
 	
