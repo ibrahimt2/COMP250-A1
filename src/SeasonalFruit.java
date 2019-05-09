@@ -8,4 +8,5 @@ public class SeasonalFruit extends Fruit {
 		return (int) (super.getCost() * 0.85);
 	}
 	
+	
 }

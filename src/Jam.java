@@ -1,7 +1,7 @@
 public class Jam extends MarketProduct {
 
 	private int numberOfJars;
-	private int pricePerJar;
+	private int pricePerJar;	//In cents
 	
 	public Jam(String name, int numberOfJars, int pricePerJar) {
 		super(name);

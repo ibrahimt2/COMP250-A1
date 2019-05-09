@@ -14,15 +14,22 @@ public class Basket {
 		return placeHolderArray;
 	}
 	
+	public ArrayList<MarketProduct> getBasketArray() {
+		return productArray;
+	}
+	
 	public void add(MarketProduct item) {
 		productArray.add(item);
 	}
 	
 	public boolean remove(MarketProduct item) {
+		int i = 0;
 		for (MarketProduct product : productArray) {
 			if (item.equals(product)) {
+				productArray.remove(i);
 				return true;
 			}
+			i++;
 		}
 		
 		return false;
@@ -61,10 +68,20 @@ public class Basket {
 		return getSubTotal() + getTotalTax();
 	}
 	
+	public String toString() {
+		String overallString = "";
+		
+		for (MarketProduct product : productArray) {
+			String temp = (product.getName() + "    " + toDollars(product.getCost()) + "\n");
+			overallString += temp;
+		}
+		
+		overallString += ("\n" + toDollars(getSubTotal()) + "\n" + toDollars(getTotalTax()) + "\n\n" + toDollars(getTotalCost()));
+		return overallString;
+	}
 	
-	
-	
-	
-	
+	public double toDollars(int cents) {
+		return ((double) cents) / 100;
+	}
 	
 }
