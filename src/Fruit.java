@@ -1,8 +1,8 @@
 
 public class Fruit extends MarketProduct {
 
-	double weight;			//Weight in kilograms
-	int pricePerKilogram;	//Price in cents
+	private double weight;			//Weight in kilograms
+	private int pricePerKilogram;	//Price in cents
 	
 	public Fruit(String name, double weight, int pricePerKilogram) {
 		super(name);
@@ -29,4 +29,5 @@ public class Fruit extends MarketProduct {
 		
 		return true;
 	}
+	
 }
