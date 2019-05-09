@@ -76,7 +76,7 @@ public class Basket {
 			overallString += temp;
 		}
 		
-		overallString += ("\n" + toDollars(getSubTotal()) + "\n" + toDollars(getTotalTax()) + "\n\n" + toDollars(getTotalCost()));
+		overallString += ("\nSubtotal:  " + toDollars(getSubTotal()) + "\nTax: " + toDollars(getTotalTax()) + "\n\nTotal: " + toDollars(getTotalCost()));
 		return overallString;
 	}
 	
